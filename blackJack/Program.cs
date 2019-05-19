@@ -81,15 +81,15 @@ namespace blackJack
                        deck[rand1] = deck[rand2];
                        deck[rand2] = temp;
                    }
-
-                Console.WriteLine("Sort deck:");
+                //Вывод отсортированной колоды карт для проверки
+              /* Console.WriteLine("Sort deck:");
                 foreach (var e in deck)
                     Console.Write(e.Rank + "" + e.Suit + " " + e.Points + "\t");
-                Console.WriteLine();
+                Console.WriteLine();*/
 
                 Card[] playerCards = new Card[10];
                 Card[] computerCards = new Card[10];
-
+                 
                 int countPlayerCard = 2, countComputerCards = 2;
                 int playerPoints = 0, computerPoins = 0;
                 bool playerFirst = true;
@@ -230,6 +230,7 @@ namespace blackJack
 
             Console.WriteLine();
             Console.WriteLine($"Some statistics: wins={wins}, loses={loses}, draws={draws}");
+            Console.ReadKey();
         }
     }
 }
